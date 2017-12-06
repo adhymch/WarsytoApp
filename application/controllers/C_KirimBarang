@@ -136,5 +136,10 @@ class C_KirimBarang extends CI_Controller {
         }
         $this->load->view('Foot/V_Footer');
     }
+    
+    public function getPalet() {
+       $Penerima = strtoupper(filter_input(INPUT_POST, "Paket"));
+        return $Paket;
+    }
 
 }

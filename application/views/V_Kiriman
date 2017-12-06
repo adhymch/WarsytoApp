@@ -1,0 +1,69 @@
+<script>
+    $(document).ready(function () {
+        $('#datatable').DataTable();
+    });
+
+</script>
+
+<h2>Daftar Barang</h2>
+<div class="divider"></div>
+<br/>
+
+<?php
+echo "<table id='datatable' class='display' cellspacing='0' width='100%'>";
+$header = "<thead>
+        <tr>
+            <th>Divisi</th>
+            <th>Serial Number</th>
+            <th>Tipe Barang</th>
+            <th>Nama Barang</th>
+            <th>Pengirim</th>
+            <th>Penerima</th>
+            <th>Lokasi Asal</th>
+            <th>Lokasi Tujuan</th>
+            <th>Tanggal Kirim</th>
+        </tr>
+    </thead>";
+$footer = "<tfoot>
+        <tr>
+            <th>Divisi</th>
+            <th>Serial Number</th>
+            <th>Tipe Barang</th>
+            <th>Nama Barang</th>
+            <th>Pengirim</th>
+            <th>Penerima</th>
+            <th>Lokasi Asal</th>
+            <th>Lokasi Tujuan</th>
+            <th>Tanggal Kirim</th>
+        </tr>
+    </tfoot>";
+echo $header;
+echo $footer;
+echo "<tbody>";
+
+foreach ($query as $row) {
+    echo "<tr>";
+    echo "<td>";
+    echo $row->Divisi;
+    echo "</td><td>";
+    echo "<a href='" . base_url('') . '/' . "'>$row->SerialNumber</a>";
+    echo "</td><td>";
+    echo $row->TipeBarang;
+    echo "</td><td>";
+    echo $row->NamaBarang;
+    echo "</td><td>";
+    echo $row->Pengirim;
+    echo "</td><td>";
+    echo $row->Penerima;
+    echo "</td><td>";
+    echo $row->Lokasi1;
+    echo "</td><td>";
+    echo $row->Lokasi2;
+    echo "</td><td>";
+    echo $row->TanggalKirim;
+    echo "</td>";
+    echo "</tr>";
+}
+echo "</tbody>";
+echo "</table>";
+?>

@@ -86,6 +86,16 @@ echo "</tr>";
 
 echo "<tr>";
 echo "<td>";
+echo "Cara Pengiriman:";
+echo "</td>";
+echo "<td>";
+$Paket = array('JNE'=>'JNE', 'Java Cargo'=>'Java Cargo');
+echo form_dropdown('Status',$Status, set_value('Status', $data['Status']),'required');
+echo "</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "<td>";
 echo "Status:";
 echo "</td>";
 echo "<td>";

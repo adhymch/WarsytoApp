@@ -25,6 +25,7 @@ $header = "<thead>
             <th>Aksi</th>
         </tr>
     </thead>";
+
 $footer = "<tfoot>
         <tr>
             <th>Divisi</th>
